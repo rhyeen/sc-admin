@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin | Sharded Cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <base href="/">
+
+  <style>
+    /* To get the font-face, visit the font `href` given by fonts.google.com for the font.  For example,
+       Roboto's embed link is: `<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">`
+       The URL will navigate to a page with several font-faces. We choose `latin` only since for now this website
+       will only be in English and it looks the download fast.
+    /* latin */
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      /* The browser draws the text immediately in the fallback font if the font
+         isn't loaded, then swaps it with the webfont when it eventually loads
+         See: https://developers.google.com/web/updates/2016/02/font-display
+      */
+      font-display: swap;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FFF;
+      display: flex;
+      /* This is a font-stack that tries to use the system-default sans-serifs first */
+      font-family: 'Roboto',Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      min-height: 100vh;
+      height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    a:link, a:visited {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <sc-admin></sc-admin>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="/__/firebase/7.0.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.0.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.0.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/init.js"></script> -->
+
+  <script type="module" src="./components/sc-admin/sc-admin.js"></script>
+</body>
+
+</html>
