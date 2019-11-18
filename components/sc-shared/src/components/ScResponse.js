@@ -39,7 +39,6 @@ export class ScResponse extends LitElement {
   }
 
   __getResponsesHtml() {
-    console.log(`html`);
     const result = [];
     for (let i = 0; i < this.responses.length; i++) {
       if (this.responses[i]) {

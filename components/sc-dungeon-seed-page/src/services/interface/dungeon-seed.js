@@ -17,9 +17,10 @@ const TAGS = {
   DEV: 'dev'
 };
 
-export function updatedTags(dungeonSeed, updateStable, updateBeta, updateAlpha, updateDev) {
+export function updateTags(dungeonId, dungeonSeed, updateStable, updateBeta, updateAlpha, updateDev) {
   const request = {
-    seed: dungeonSeed,
+    dungeonId,
+    dungeonSeed,
     tags: []
   };
   if (updateStable) {
@@ -36,7 +37,7 @@ export function updatedTags(dungeonSeed, updateStable, updateBeta, updateAlpha, 
   }
   switch (InterfaceState.get()) {
     case INTERFACE_STATE.HTTP:
-      return CallHttp.updatedTags(request);
+      return CallHttp.updateTags(request);
     default:
       return InterfaceState.invalid();
   }

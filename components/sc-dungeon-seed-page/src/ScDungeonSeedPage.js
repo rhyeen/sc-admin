@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { Log } from 'interface-handler/src/logger.js';
-import { generateSeed, updateTags } from './services/interface/firebase/dungeon-seed';
+import { generateSeed, updateTags } from './services/interface/dungeon-seed';
 import { SC_BTN_TYPES } from '../../sc-shared/src/components/ScBtn';
 
 export class ScDungeonSeedPage extends LitElement {
@@ -62,7 +62,7 @@ export class ScDungeonSeedPage extends LitElement {
   __generateDungeonSeed() {
     generateSeed(this._dungeonId).then(generateSeedResponse => {
       this._generateSeedResponse = generateSeedResponse;
-      updateTags(generateSeedResponse.data.seed, this._updateTagStable, this._updateTagBeta, this._updateTagAlpha, this._updateTagDev)
+      updateTags(this._dungeonId, generateSeedResponse.data.seed, this._updateTagStable, this._updateTagBeta, this._updateTagAlpha, this._updateTagDev)
       .then(updateTagsResponse => {
         this._updateTagsResponse = updateTagsResponse;
       }, err => {

@@ -5,5 +5,5 @@ export function generateSeed(dungeonId) {
 }
 
 export function updateTags(request) {
-  return firebaseFunctions.httpsCallable('updateTags')(firebaseAdminRequest({request}));
+  return firebaseFunctions.httpsCallable('updateTags')(firebaseAdminRequest({...request}));
 }
