@@ -18,6 +18,10 @@ export class ScResponse extends LitElement {
           font-size: 12px;
           color: #666;
         }
+
+        .response {
+          margin-bottom: 10px;
+        }
       `,
     ];
   }
@@ -53,7 +57,7 @@ export class ScResponse extends LitElement {
 
   __getResponseHtml(response, index) {
     return html`
-      <div><span class="index">${index + 1}:</span> ${JSON.stringify(response)}</div>
+      <div class="response"><span class="index">${index + 1}:</span> ${JSON.stringify(response)}</div>
     `;
   }
 }

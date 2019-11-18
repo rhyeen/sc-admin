@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { Log } from 'interface-handler/src/logger.js';
-import { generateSeed } from './services/interface/firebase/dungeon-seed';
+import { generateSeed, updateTags } from './services/interface/firebase/dungeon-seed';
 import { SC_BTN_TYPES } from '../../sc-shared/src/components/ScBtn';
 
 export class ScDungeonSeedPage extends LitElement {
