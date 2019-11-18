@@ -60,6 +60,8 @@ export class ScDungeonSeedPage extends LitElement {
   }
 
   __generateDungeonSeed() {
+    this._generateSeedResponse = "";
+    this._updateTagsResponse = "";
     generateSeed(this._dungeonId).then(generateSeedResponse => {
       this._generateSeedResponse = generateSeedResponse;
       updateTags(this._dungeonId, generateSeedResponse.data.seed, this._updateTagStable, this._updateTagBeta, this._updateTagAlpha, this._updateTagDev)
