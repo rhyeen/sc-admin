@@ -4,7 +4,7 @@ import { InterfaceState, INTERFACE_STATE } from 'interface-handler/src/interface
 
 export const PAGE = {
   DUNGEON_SEED: 'dungeonSeed',
-  NA: 'na'
+  GAME: 'game'
 };
 
 export const DEFAULT_PAGE = PAGE.DUNGEON_SEED;
@@ -34,7 +34,7 @@ export class ScAdmin extends LitElement {
     return html`
       <nav>
         <sc-page-nav-item title="Dungeon Seed" .thisPage=${PAGE.DUNGEON_SEED} .currentPage=${this._page} @selected=${this.__selectPage}></sc-page-nav-item>
-        <sc-page-nav-item title="NA" .thisPage=${PAGE.NA} .currentPage=${this._page} @selected=${this.__selectPage}></sc-page-nav-item>
+        <sc-page-nav-item title="Game" .thisPage=${PAGE.GAME} .currentPage=${this._page} @selected=${this.__selectPage}></sc-page-nav-item>
       </nav>
 
       <main>
@@ -64,6 +64,10 @@ export class ScAdmin extends LitElement {
       case PAGE.DUNGEON_SEED:
         return html`
           <sc-dungeon-seed-page></sc-dungeon-seed-page>
+        `;
+      case PAGE.GAME:
+        return html`
+          <sc-game-page></sc-game-page>
         `;
       default:
         Log.error(`cannot find page: ${this._page}`);

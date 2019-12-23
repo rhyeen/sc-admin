@@ -56,7 +56,6 @@ export class ScDungeonSeedPage extends LitElement {
     this._updateTagBeta = true;
     this._updateTagAlpha = true;
     this._updateTagDev = true;
-    this._responsesVersion = 0;
   }
 
   __generateDungeonSeed() {
