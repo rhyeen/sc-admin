@@ -1,5 +1,6 @@
 import '../sc-dungeon-seed-page/sc-dungeon-seed-page.js';
 import '../sc-game-page/sc-game-page.js';
+import '../sc-games-page/sc-games-page.js';
 
 import { ScAdmin } from './src/ScAdmin.js';
 import { ScPageNavItem } from './src/components/ScPageNavItem.js';
